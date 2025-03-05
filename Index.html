@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1>Surprise! It's your special day!</h1>
+            <p>I thought about surprising you, and here's what I came up with...</p>
+            <p id="story"></p>
+            <button id="startBtn">Let's start the fun!</button>
+        </div>
+
+        <div id="task1" class="task hidden">
+            <h2>Task 1: Tap the candle to light it!</h2>
+            <img id="candle" src="candle_off.png" alt="Candle" onclick="lightCandle()">
+        </div>
+
+        <div id="task2" class="task hidden">
+            <h2>Task 2: Blow up the balloons!</h2>
+            <div id="balloons">
+                <img src="balloon.png" alt="Balloon" class="balloon" onclick="blowBalloon(this)">
+            </div>
+        </div>
+
+        <div id="task3" class="task hidden">
+            <h2>Task 3: Happy Birthday message!</h2>
+            <p>You're amazing, and I'm so grateful to know you!</p>
+            <button onclick="finish()">Enjoy your day!</button>
+        </div>
+
+        <div id="endMessage" class="hidden">
+            <h2>Thank you for playing! Hope you have the best birthday ever!</h2>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="spring_snow.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
